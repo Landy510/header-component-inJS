@@ -13,4 +13,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
       if(isActive) evt.target.classList.remove('header-option-active');
     }, false)
   })
+
+  const mobileMenuBtnArr = [...document.querySelectorAll('.header.mobile .menu-button .toggle-button')];
+  mobileMenuBtnArr.forEach(btn => {
+    btn.addEventListener('click', (evt) => {
+      evt.target.parentElement.parentElement.classList.toggle('mobile-active');
+    })
+  })
 });

@@ -5,11 +5,29 @@
 }
 
 .header {
-  border: 1px solid #000;
   display: flex;
   margin: 0 auto;
   font-size: 16px;
   font-family: 'Noto Sans TC', sans-serif;
+}
+
+.header.desktop {
+  display: flex;
+  align-items: center;
+}
+.header.mobile {
+  display: none;
+}
+
+@media(max-width: 961px) {
+  .header.desktop {
+    display: none;
+  }
+  .header.mobile {
+    display: flex;
+    align-items: center;
+    position: relative;
+  } 
 }
 
 .header .header-brand {
@@ -18,19 +36,19 @@
   text-decoration: none;
 }
 
-.header .header-brand> .material-icons {
+.header .header-brand > .material-icons {
   font-size: 3rem;
   max-height: 100%;
 }
 
 .header-root-list {
   display: flex;
-  margin-left: auto;
+  margin-right: auto;
 }
 
 .header .header-option {
   position: relative;
-  display: flex;
+  /* display: flex; */
 }
 
 .header .header-option:hover {
@@ -56,6 +74,7 @@
 
 .header-root-list
 .header-option.header-option-active
+> .header-optionLink
 {
   background-color: #fa0;
 }
@@ -87,4 +106,60 @@
 > .header-option.header-option-active
 > .header-submenu-list {
   display: block;
+}
+
+
+/* mobile css style */
+.header.mobile .menu-button {
+  display: flex;
+  text-decoration: none;
+}
+
+.header.mobile .menu-button > .open-button {
+  display: inline-block;
+}
+
+.header.mobile .menu-button > .close-button {
+  display: none;
+}
+
+.header.mobile.mobile-active > .menu-button >.open-button {
+  display: none;
+}
+
+.header.mobile.mobile-active > .menu-button > .close-button {
+  display: inline-block;
+}
+
+.header.mobile .header-root-list {
+  display: none;
+}
+
+.header.mobile.mobile-active .header-root-list {
+  display: block;
+  position: absolute;
+  top: 100%;
+}
+
+@media(max-width: 961px) {
+  .header-root-list {
+    width: 100%;
+  }
+
+  .header-root-list .header-option .header-submenu-list {
+    position: static;
+    width: 100%;
+  }
+
+  .header-root-list .header-option .header-submenu-list li a {
+    padding-left: 2.25rem;
+  }
+
+  .header-root-list .header-option .header-submenu-list li ul li a {
+    padding-left: 3.75rem;
+  }
+
+  .header-root-list .header-option .header-submenu-list li ul li ul li a {
+    padding-left: 5.25rem;
+  }
 }

@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
+  <div class="header desktop">
       <a href="#" class="header-brand">
         <span class="material-icons">
           health_and_safety
@@ -132,6 +132,60 @@
       </ul>
   </div>
 
+
+  <div class="header mobile">
+    <a href="#" class="header-brand">
+      <span class="material-icons">
+        health_and_safety
+      </span>
+    </a>
+    <a href="#" class="menu-button">
+      <span class="material-icons toggle-button open-button">
+        menu
+      </span>
+      <span class="material-icons toggle-button close-button">
+        close
+      </span>
+    </a>
+
+
+    <ul class="header-root-list">
+      <li class="header-option">
+        <a class="header-optionLink">
+          <span class="headerOption-text"> mobile root 1 </span>
+          <span class="headerOption-icon"> &#94; </span>
+        </a>
+        <ul class="header-submenu-list">
+          <li class="header-option">
+            <a class="header-optionLink">
+              <span class="headerOption-text"> child 1 </span>
+              <span class="headerOption-icon"> &#94; </span>
+            </a>
+            <ul class="header-submenu-list">
+              <li class="header-option">
+                <a class="header-optionLink">
+                  <span class="headerOption-text"> grand child 1 </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="header-option">
+        <a class="header-optionLink">
+          <span class="headerOption-text"> mobile root 2 </span>
+          <span class="headerOption-icon"> &#94; </span>
+        </a>
+        <ul class="header-submenu-list">
+          <li class="header-option">
+            <a class="header-optionLink">
+              <span class="headerOption-text"> child 1 </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
   <script src="./index.js"></script>
 </body>
 </html>
