@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header {
+  border: 1px solid #000;
+  display: flex;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.header .header-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header .header-brand> .material-icons {
+  font-size: 3rem;
+  max-height: 100%;
+}
+
+.header-root-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.header .header-option {
+  position: relative;
+  display: flex;
+}
+
+.header .header-option:hover {
+  cursor: pointer;
+}
+
+.header-root-list .header-option .header-optionLink {
+  display: flex;
+  padding: 0.75rem 1.25rem;
+}
+
+.header-root-list .header-option .header-optionLink > .headerOption-icon {
+  margin-left: auto;
+}
+
+.header-root-list .header-option .header-submenu-list {
+  position: absolute;
+  z-index: 2;
+  left: 0%;
+  top: 100%;
+  width: 12.5rem;
+}
+
+.header-root-list
+.header-option.header-option-active
+{
+  background-color: #fa0;
+}
+
+.header-root-list
+.header-submenu-list {
+  display: none;
+}
+
+.header-root-list
+> .header-option.header-option-active
+> .header-submenu-list {
+  display: block;
+}
+
+.header-root-list
+.header-option
+.header-submenu-list
+> .header-option 
+> .header-submenu-list {
+  display: none;
+  left: 100%;
+  top: 0;
+}
+
+.header-root-list
+.header-option
+.header-submenu-list
+> .header-option.header-option-active
+> .header-submenu-list {
+  display: block;
+}
